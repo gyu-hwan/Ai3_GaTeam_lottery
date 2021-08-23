@@ -24,9 +24,18 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance
 	WndClass.style = CS_HREDRAW | CS_VREDRAW;
 	RegisterClass(&WndClass);
 
-	hWnd = CreateWindow(lpszClass, lpszClass, WS_OVERLAPPEDWINDOW,
-		CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT,
-		NULL, (HMENU)NULL, hInstance, NULL);
+	hWnd = CreateWindow(
+		lpszClass,
+		lpszClass, 
+		WS_OVERLAPPEDWINDOW,
+		CW_USEDEFAULT, 
+		CW_USEDEFAULT, 
+		CW_USEDEFAULT, 
+		CW_USEDEFAULT,
+		NULL, 
+		(HMENU)NULL, 
+		hInstance, 
+		NULL);
 	ShowWindow(hWnd, nCmdShow);
 
 	while (GetMessage(&Message, 0, 0, 0)) {
